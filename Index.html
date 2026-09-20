@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy Birthday Arya (Paru)! 💖 With Love, Amal</title>
+  
+  <style>
+    /* CRITICAL ANTI-FLASH ENGINE FIX:
+       Locks the browser compositor buffer to dark to eliminate white frame flashes on tap/click. */
+    :root {
+      color-scheme: dark !important;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent !important;
+      -webkit-touch-callout: none;
+      outline: none;
+    }
+
+    html, body {
+      background-color: #090107 !important;
+      background: #090107 !important;
+      color: #ffe4e6;
+      color-scheme: dark !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      min-height: 100vh;
+      width: 100%;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Ambient Background Layer */
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle at 50% 20%, rgba(136, 19, 55, 0.28) 0%, rgba(9, 1, 7, 0.95) 75%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Typography */
+    .font-serif {
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+    .font-script {
+      font-family: "Brush Script MT", "Segoe Script", "Apple Chancery", cursive, sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    /* Base Container */
+    .container {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 16px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Fixed Top Controls */
+    .header-bar {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 60;
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Zero-Transform Buttons: prevents GPU layer rebuilds and mobile flashes */
+    .btn-pill {
+      background: #24041a;
+      color: #fde047;
+      border: 1px solid #ca8a04;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      transition: background-color 0.2s ease, opacity 0.15s ease;
+    }
+    .btn-pill:active {
+      opacity: 0.85;
+      background: #3a082b;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #e11d48, #be123c);
+      color: #ffffff;
+      border: 1px solid #fb7185;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4);
+      transition: opacity 0.15s ease, filter 0.15s ease;
+    }
+    .btn-primary:active {
+      opacity: 0.85;
+      filter: brightness(1.1);
+    }
+
+    .btn-secondary {
+      background: #180312;
+      color: #fde047;
+      border: 1px solid #ca8a04;
+      padding: 11px 20px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+      transition: opacity 0.15s ease, background-color 0.2s ease;
+    }
+    .btn-secondary:active {
+      opacity: 0.85;
+      background: #2b0621;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 28px;
+    }
+    .badge-crown {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #240517;
+      border: 1px solid #f59e0b;
+      color: #fef08a;
+      padding: 6px 18px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+    }
+    .hero-title {
+      font-size: clamp(34px, 7vw, 62px);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .hero-name {
+      display: block;
+      font-size: clamp(52px, 11vw, 90px);
+      color: #fef08a;
+      text-shadow: 0 0 25px rgba(245, 158, 11, 0.45);
+      margin-top: 2px;
+    }
+    .hero-subtitle {
+      font-size: clamp(20px, 4vw, 32px);
+      color: #f43f5e;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .hero-desc {
+      color: #fecdd3;
+      font-size: 15px;
+      max-width: 520px;
+      margin: 0 auto 22px auto;
+      opacity: 0.92;
+    }
+
+    .nav-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* Card Panels */
+    .card {
+      background: #170414;
+      border: 1px solid #480c32;
+      border-radius: 24px;
+      padding: 28px 20px;
+      margin-bottom: 36px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+    .card-gold {
+      background: linear-gradient(165deg, #22061b, #12020e);
+      border: 1px solid #b45309;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+    .section-eyebrow {
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #f59e0b;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .section-heading {
+      font-size: clamp(22px, 4vw, 32px);
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .section-subtext {
+      color: #fda4af;
+      font-size: 13px;
+      margin-bottom: 22px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Birthday Cake Graphics */
+    .cake-container {
+      width: 240px;
+      margin: 0 auto 24px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      user-select: none;
+    }
+    .candles-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 22px;
+      margin-bottom: 2px;
+    }
+    .candle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+    .flame {
+      width: 14px;
+      height: 24px;
+      background: radial-gradient(ellipse at bottom, #ffffff 15%, #ffeb3b 45%, #ff5722 85%, transparent 95%);
+      border-radius: 50% 50% 25% 25%;
+      box-shadow: 0 0 14px #f59e0b;
+      animation: flicker 0.25s infinite alternate;
+      transform-origin: center bottom;
+      transition: opacity 0.3s ease;
+    }
+    @keyframes flicker {
+      0% { transform: scale(1) skewX(-1.5deg); }
+      100% { transform: scale(0.92) skewX(1.5deg); }
+    }
+    .flame.extinguished {
+      opacity: 0 !important;
+      visibility: hidden;
+    }
+    .candle-stem {
+      width: 14px;
+      border-radius: 4px 4px 0 0;
+      background: repeating-linear-gradient(45deg, #fef08a, #fef08a 4px, #f43f5e 4px, #f43f5e 8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .stem-sm { height: 44px; }
+    .stem-lg { height: 54px; }
+
+    .cake-top-tier {
+      width: 160px;
+      height: 56px;
+      background: linear-gradient(to right, #f43f5e, #fb7185, #f43f5e);
+      border-radius: 14px 14px 0 0;
+      border-top: 4px solid #fef08a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4c0519;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .cake-bottom-tier {
+      width: 220px;
+      height: 64px;
+      background: linear-gradient(to right, #881337, #9f1239, #881337);
+      border-radius: 16px 16px 0 0;
+      border-top: 4px solid #f59e0b;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    .cake-platter {
+      width: 250px;
+      height: 10px;
+      background: linear-gradient(to right, #fef08a, #eab308, #fef08a);
+      border-radius: 9999px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.8);
+    }
+
+    /* Wish Notification Box */
+    .wish-box {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 16px;
+      background: #0d010b;
+      border: 1px solid #f59e0b;
+      display: none;
+    }
+    .wish-box.show {
+      display: block;
+    }
+
+    /* Polaroids Gallery */
+    .polaroids-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .polaroid-card {
+      background: #ffffff;
+      color: #1e1b4b;
+      padding: 12px 12px 16px 12px;
+      border-radius: 14px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .polaroid-img-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      background: #1c0415;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .polaroid-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .polaroid-caption {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+    .polaroid-sub {
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.35;
+    }
+
+    /* Balloons Section */
+    .balloons-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      max-width: 560px;
+      margin: 0 auto 16px auto;
+    }
+    .balloon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .balloon-shape {
+      width: 60px;
+      height: 74px;
+      border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    }
+    .b-pink { background: linear-gradient(135deg, #f43f5e, #be123c); }
+    .b-gold { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .b-rose { background: linear-gradient(135deg, #ec4899, #be185d); }
+    .b-wine { background: linear-gradient(135deg, #e11d48, #9f1239); }
+
+    .balloon-label {
+      margin-top: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fde047;
+      background: #0d010b;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      border: 1px solid #480c32;
+    }
+    .reveal-box {
+      background: #0d010b;
+      border: 1px solid #f59e0b;
+      padding: 16px;
+      border-radius: 16px;
+      color: #fef08a;
+      display: none;
+      max-width: 480px;
+      margin: 16px auto 0 auto;
+    }
+    .reveal-box.show { display: block; }
+
+    /* Love Letter */
+    .letter-paper {
+      background: #fffdf9;
+      color: #1e1b4b;
+      padding: 32px 24px;
+      border-radius: 20px;
+      border: 2px solid #fed7aa;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.7);
+      text-align: left;
+      position: relative;
+    }
+    .stamp-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      border: 1.5px dashed #f43f5e;
+      background: #fff1f2;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 10px;
+      color: #9f1239;
+      font-weight: 700;
+    }
+    .letter-salutation {
+      font-size: 28px;
+      color: #be123c;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    .letter-body p {
+      font-size: 15px;
+      color: #334155;
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .letter-sig {
+      text-align: right;
+      border-top: 1px solid #fecdd3;
+      padding-top: 14px;
+      margin-top: 18px;
+    }
+    .letter-sig-name {
+      font-size: 28px;
+      color: #be123c;
+      font-weight: 700;
+    }
+
+    /* Privilege Passes */
+    .coupons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .coupon-card {
+      background: #190416;
+      border: 1px solid #4f1138;
+      border-radius: 18px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .coupon-card h4 {
+      color: #fde047;
+      font-size: 16px;
+      margin: 6px 0;
+      font-weight: 700;
+    }
+    .coupon-card p {
+      font-size: 12px;
+      color: #fbcfe8;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .claim-btn {
+      background: #340927;
+      color: #fde047;
+      border: 1px solid #ca8a04;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .claim-btn.claimed {
+      background: #be123c;
+      color: #ffffff;
+      border-color: #fb7185;
+    }
+
+    /* Gift Opening Screen */
+    .gift-modal {
+      position: fixed;
+      inset: 0;
+      background: #090107;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: opacity 0.3s ease;
+    }
+    .gift-modal.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .gift-inner {
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    .gift-box-visual {
+      width: 180px;
+      height: 160px;
+      background: linear-gradient(135deg, #be123c, #e11d48);
+      border-radius: 18px;
+      margin: 24px auto;
+      position: relative;
+      border: 2px solid #fda4af;
+      cursor: pointer;
+      box-shadow: 0 16px 40px rgba(225, 29, 72, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gift-ribbon-v {
+      position: absolute;
+      width: 30px;
+      height: 100%;
+      background: linear-gradient(to right, #fde047, #f59e0b);
+    }
+    .gift-ribbon-h {
+      position: absolute;
+      height: 30px;
+      width: 100%;
+      background: linear-gradient(to bottom, #fde047, #f59e0b);
+    }
+    .gift-bow {
+      position: absolute;
+      top: -20px;
+      width: 40px;
+      height: 40px;
+      background: #f59e0b;
+      border-radius: 50%;
+      border: 3px solid #fef08a;
+    }
+    .gift-prompt {
+      position: relative;
+      z-index: 2;
+      background: #fef08a;
+      color: #881337;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1a0314;
+      border: 1px solid #f59e0b;
+      color: #fef08a;
+      padding: 10px 22px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .toast.show {
+      opacity: 1;
+    }
+
+    @media (max-width: 540px) {
+      .balloons-row { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .card { padding: 22px 14px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="ambient-bg"></div>
+
+  <!-- Pre-mounted Persistent Confetti Canvas: No dynamic DOM creation on click -->
+  <canvas id="fxCanvas" style="position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 150;"></canvas>
+
+  <!-- Top Bar Controls -->
+  <div class="header-bar">
+    <button type="button" class="btn-pill" id="musicToggleBtn" onclick="toggleAudioMelody()">
+      <span id="musicEmoji">🎵</span>
+      <span id="musicText">Play Music</span>
+    </button>
+  </div>
+
+  <!-- Gift Opening Screen -->
+  <div id="giftScreen" class="gift-modal">
+    <div class="gift-inner">
+      <div class="badge-crown">
+        <span>✨</span>
+        <span>A Special Delivery for Paru</span>
+        <span>✨</span>
+      </div>
+
+      <h1 class="font-serif" style="font-size: 32px; font-weight: 700; color: #fff; margin-bottom: 8px;">
+        A Surprise For My Paru ❤️
+      </h1>
+      
+      <p style="color: #fbcfe8; font-size: 14px; margin-bottom: 12px; line-height: 1.5;">
+        Crafted with all my love, by Amal. Tap the mystery box to unwrap your birthday celebration!
+      </p>
+
+      <div class="gift-box-visual" onclick="revealCelebration()">
+        <div class="gift-ribbon-v"></div>
+        <div class="gift-ribbon-h"></div>
+        <div class="gift-bow"></div>
+        <div class="gift-prompt">TAP TO OPEN ✨</div>
+      </div>
+
+      <button type="button" onclick="revealCelebration()" style="background: none; border: none; color: #fde047; font-size: 13px; text-decoration: underline; cursor: pointer; padding: 6px;">
+        Skip intro &amp; view surprise 💖
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Experience -->
+  <main class="container" style="padding-top: 20px; padding-bottom: 60px;">
+    
+    <!-- Hero Banner -->
+    <section class="hero">
+      <div class="badge-crown">
+        <span>👑</span>
+        <span>Queen of My Heart</span>
+        <span>👑</span>
+      </div>
+
+      <h1 class="hero-title font-serif">
+        Happy Birthday,<br>
+        <span class="hero-name font-script">Arya</span>
+      </h1>
+      
+      <div class="hero-subtitle font-script">
+        (My Darling Paru ❤️)
+      </div>
+
+      <p class="hero-desc">
+        Another year more breathtaking, precious, and pure. Today, my entire world celebrates the day my favorite girl was born.
+      </p>
+
+      <!-- Navigation Buttons with Zero-Flash Coordinate Scrolling -->
+      <div class="nav-actions">
+        <button type="button" class="btn-primary" onclick="safeJump('cakeSection')">
+          <span>Make a Wish 🕯️</span>
+        </button>
+        <button type="button" class="btn-secondary" onclick="safeJump('memoriesSection')">
+          <span>Our Moments 📸</span>
+        </button>
+        <button type="button" class="btn-secondary" onclick="safeJump('letterSection')">
+          <span>Amal's Letter 💌</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Birthday Cake Section -->
+    <section id="cakeSection" class="card card-gold">
+      <span class="section-eyebrow">A Sacred Birthday Wish</span>
+      <h2 class="section-heading font-serif">Blow Out Your Candles, Paru</h2>
+      <p class="section-subtext">
+        Close your eyes, make a wish with all your heart, and tap the candles or the button below!
+      </p>
+
+      <div class="cake-container">
+        <!-- 3 Candles -->
+        <div class="candles-row">
+          <div class="candle" onclick="blowCandles()">
+            <div class="flame flame-candle"></div>
+            <div class="candle-stem stem-sm"></div>
+          </div>
+          <div class="candle" onclick="blowCandles()">
+            <div class="flame flame-candle"></div>
+            <div class="candle-stem stem-lg"></div>
+          </div>
+          <div class="candle" onclick="blowCandles()">
+            <div class="flame flame-candle"></div>
+            <div class="candle-stem stem-sm"></div>
+          </div>
+        </div>
+
+        <!-- Tier 1 -->
+        <div class="cake-top-tier">ARYA • 💖</div>
+        
+        <!-- Tier 2 -->
+        <div class="cake-bottom-tier">
+          <span style="font-size: 20px;">🍓</span>
+          <span class="font-script" style="font-size: 26px; color: #fde047; font-weight: 700;">Paru</span>
+          <span style="font-size: 20px;">🍓</span>
+        </div>
+
+        <!-- Platter -->
+        <div class="cake-platter"></div>
+      </div>
+
+      <button type="button" id="blowBtn" class="btn-primary" onclick="blowCandles()" style="font-size: 15px; padding: 12px 28px;">
+        <span>💨</span>
+        <span id="blowBtnText">Blow Out Candles</span>
+      </button>
+
+      <div id="wishBox" class="wish-box">
+        <p class="font-serif" style="font-size: 17px; font-weight: 700; color: #fde047; margin-bottom: 4px;">
+          ✨ Your Birthday Wish is Reaching the Heavens! ✨
+        </p>
+        <p style="font-size: 13px; color: #fbcfe8; line-height: 1.5; max-width: 420px; margin: 0 auto;">
+          "May all your silent prayers, your brightest dreams, and every wish in your heart come true this year, my Arya."
+        </p>
+      </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memoriesSection" class="card">
+      <span class="section-eyebrow">Snapshots of Us</span>
+      <h2 class="section-heading font-serif">Our Treasured Moments</h2>
+      <p class="section-subtext">
+        Every moment by your side is my favorite memory, Paru.
+      </p>
+
+      <div class="polaroids-grid">
+        <!-- Photo 1: Amal & Arya Hug -->
+        <div class="polaroid-card">
+          <div class="polaroid-img-wrap">
+            <img id="imgMem-0" src="1000076888.png" alt="Amal and Arya warm embrace" onerror="applyArtworkFallback(this, 0)">
+          </div>
+          <div class="polaroid-caption font-script">My Safe Place</div>
+          <div class="polaroid-sub">Wrapped in your warmth is where I belong forever.</div>
+        </div>
+
+        <!-- Photo 2: Head on Shoulder -->
+        <div class="polaroid-card">
+          <div class="polaroid-img-wrap">
+            <img id="imgMem-1" src="1000058205.jpg" alt="Arya resting head on Amal" onerror="applyArtworkFallback(this, 1)">
+          </div>
+          <div class="polaroid-caption font-script">Beside You, Always</div>
+          <div class="polaroid-sub">Resting on your shoulder, all worries simply melt away.</div>
+        </div>
+
+        <!-- Photo 3: Traditional Kasavu Saree -->
+        <div class="polaroid-card">
+          <div class="polaroid-img-wrap">
+            <img id="imgMem-2" src="1000101191.jpg" alt="Arya in traditional Kasavu saree" onerror="applyArtworkFallback(this, 2)">
+          </div>
+          <div class="polaroid-caption font-script">My Traditional Queen</div>
+          <div class="polaroid-sub">That radiant smile that stole my heart on day one.</div>
+        </div>
+
+        <!-- Photo 4: Pure Smile Portrait -->
+        <div class="polaroid-card">
+          <div class="polaroid-img-wrap">
+            <img id="imgMem-3" src="1000076822.jpg" alt="Arya gentle pure smile portrait" onerror="applyArtworkFallback(this, 3)">
+          </div>
+          <div class="polaroid-caption font-script">The Purest Soul</div>
+          <div class="polaroid-sub">Your gentle heart and sparkling eyes light up every room.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Balloons Minigame -->
+    <section class="card">
+      <span class="section-eyebrow">A Sweet Game For You</span>
+      <h2 class="section-heading font-serif">Pop The Love Balloons</h2>
+      <p class="section-subtext">
+        Inside each balloon is a secret confession from Amal. Tap each one to pop and read it!
+      </p>
+
+      <div class="balloons-row">
+        <!-- Balloon 1 -->
+        <div id="balloon-0" class="balloon-item" onclick="popBalloon(0)">
+          <div class="balloon-shape b-pink">🎈</div>
+          <div class="balloon-label">Pop Me #1</div>
+        </div>
+
+        <!-- Balloon 2 -->
+        <div id="balloon-1" class="balloon-item" onclick="popBalloon(1)">
+          <div class="balloon-shape b-gold">🎈</div>
+          <div class="balloon-label">Pop Me #2</div>
+        </div>
+
+        <!-- Balloon 3 -->
+        <div id="balloon-2" class="balloon-item" onclick="popBalloon(2)">
+          <div class="balloon-shape b-rose">🎈</div>
+          <div class="balloon-label">Pop Me #3</div>
+        </div>
+
+        <!-- Balloon 4 -->
+        <div id="balloon-3" class="balloon-item" onclick="popBalloon(3)">
+          <div class="balloon-shape b-wine">🎈</div>
+          <div class="balloon-label">Pop Me #4</div>
+        </div>
+      </div>
+
+      <div id="balloonReveal" class="reveal-box">
+        <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #f59e0b;">Amal's Secret Whisper:</span>
+        <p id="balloonMessage" class="font-serif" style="font-size: 15px; font-style: italic; color: #fff; margin-top: 6px; line-height: 1.5;"></p>
+      </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section id="letterSection" class="card" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <span class="section-eyebrow">Straight From My Soul</span>
+        <h2 class="section-heading font-serif">Amal's Letter To Paru</h2>
+      </div>
+
+      <div class="letter-paper">
+        <div class="stamp-badge">
+          💌 For Arya (Paru)
+        </div>
+
+        <div class="letter-salutation font-script">
+          Dearest Paru,
+        </div>
+
+        <div class="letter-body font-serif">
+          <p>
+            Happy, beautiful birthday, my sunshine! As another year turns around the sun, I want you to take a slow breath and know without a shadow of a doubt how deeply cherished you are.
+          </p>
+          <p>
+            From that dazzling smile that lights up my universe in an instant, to the quiet moments when your head rests gently on my shoulder — loving you is the easiest, greatest thing I have ever done.
+          </p>
+          <p>
+            You bring warmth into days that feel overwhelming, pure joy into simple moments, and an effortless beauty into my entire existence. Life has brighter colors and deeper meaning with you holding my hand.
+          </p>
+          <p>
+            My only prayer for you on this birthday is that you receive all the boundless happiness, peace, and adoration you so freely give to everyone around you. You will forever be my queen, my home, and my favorite person.
+          </p>
+        </div>
+
+        <div class="letter-sig font-serif">
+          <div style="font-size: 13px; color: #64748b; font-style: italic;">Always and unconditionally yours,</div>
+          <div class="letter-sig-name font-script">Amal ❤️</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privilege Passes Section -->
+    <section class="card" style="margin-top: 36px;">
+      <span class="section-eyebrow">Birthday VIP Perks</span>
+      <h2 class="section-heading font-serif">Paru's Privilege Passes</h2>
+      <p class="section-subtext">Never expiring! Redeem anytime with Amal.</p>
+
+      <div class="coupons-grid">
+        <div class="coupon-card">
+          <div style="font-size: 32px;">💆‍♀️</div>
+          <h4 class="font-serif">Pampering Head Massage</h4>
+          <p>No questions asked, 30 minutes of pure relaxation whenever Paru asks.</p>
+          <button type="button" class="claim-btn" onclick="claimPass(this, 'Pampering Head Massage')">Claim Pass</button>
+        </div>
+
+        <div class="coupon-card">
+          <div style="font-size: 32px;">🍽️</div>
+          <h4 class="font-serif">Date Night of Your Choice</h4>
+          <p>Any restaurant, any cuisine, full royal princess treatment by Amal.</p>
+          <button type="button" class="claim-btn" onclick="claimPass(this, 'Date Night of Your Choice')">Claim Pass</button>
+        </div>
+
+        <div class="coupon-card">
+          <div style="font-size: 32px;">🎬</div>
+          <h4 class="font-serif">Movie &amp; Snack Night</h4>
+          <p>Paru picks the movies, unlimited favorite snacks, zero arguments!</p>
+          <button type="button" class="claim-btn" onclick="claimPass(this, 'Movie & Snack Night')">Claim Pass</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 24px 0; color: #fda4af; font-size: 13px;">
+      <button type="button" class="btn-primary" onclick="spawnConfetti(70)" style="margin-bottom: 14px;">
+        <span>🎉</span>
+        <span>Shower Arya with Confetti!</span>
+      </button>
+      <p class="font-serif">Crafted with endless love by Amal for Arya (Paru) ❤️</p>
+    </footer>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <span id="toastMsg">Pass Claimed!</span>
+  </div>
+
+  <script>
+    /* 1. Zero-Flash Navigation: Safe Coordinate Scrolling */
+    function safeJump(elementId) {
+      const target = document.getElementById(elementId);
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 16;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    }
+
+    /* 2. Persistent In-Memory Canvas Confetti Engine (Zero DOM Reallocations) */
+    const fxCanvas = document.getElementById('fxCanvas');
+    const fxCtx = fxCanvas.getContext('2d');
+    let fxW = fxCanvas.width = window.innerWidth;
+    let fxH = fxCanvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      fxW = fxCanvas.width = window.innerWidth;
+      fxH = fxCanvas.height = window.innerHeight;
+    });
+
+    let particles = [];
+    const colors = ['#f59e0b', '#fb7185', '#f43f5e', '#fef08a', '#ffffff'];
+
+    function spawnConfetti(count = 50) {
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: fxW / 2 + (Math.random() - 0.5) * 160,
+          y: fxH * 0.55 + (Math.random() - 0.5) * 50,
+          vx: (Math.random() - 0.5) * 14,
+          vy: -Math.random() * 14 - 4,
+          size: Math.random() * 8 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 10,
+          life: 1,
+          decay: Math.random() * 0.015 + 0.01
+        });
+      }
+    }
+
+    function renderParticles() {
+      fxCtx.clearRect(0, 0, fxW, fxH);
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.45;
+        p.vx *= 0.98;
+        p.rotation += p.rotSpeed;
+        p.life -= p.decay;
+
+        if (p.life <= 0 || p.y > fxH + 20) {
+          particles.splice(i, 1);
+          continue;
+        }
+
+        fxCtx.save();
+        fxCtx.translate(p.x, p.y);
+        fxCtx.rotate((p.rotation * Math.PI) / 180);
+        fxCtx.fillStyle = p.color;
+        fxCtx.globalAlpha = Math.max(0, p.life);
+        fxCtx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+        fxCtx.restore();
+      }
+      requestAnimationFrame(renderParticles);
+    }
+    requestAnimationFrame(renderParticles);
+
+    /* 3. Embedded Artistic Vector Fallbacks */
+    const vectorArtworks = [
+      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><rect width='400' height='500' fill='%23240517'/><circle cx='200' cy='180' r='90' fill='%23fde047' opacity='0.3'/><circle cx='180' cy='170' r='24' fill='%23fef08a'/><circle cx='215' cy='180' r='22' fill='%23fbcfe8'/><text x='200' y='360' font-family='serif' font-size='20' fill='%23fde047' text-anchor='middle'>Amal &amp; Arya</text></svg>",
+      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><rect width='400' height='500' fill='%23190416'/><circle cx='170' cy='180' r='28' fill='%23fdba74'/><circle cx='230' cy='205' r='24' fill='%23f472b6'/><text x='200' y='360' font-family='serif' font-size='20' fill='%23fef08a' text-anchor='middle'>Beside You</text></svg>",
+      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><rect width='400' height='500' fill='%232a081c'/><circle cx='200' cy='175' r='35' fill='%23fde047'/><text x='200' y='360' font-family='serif' font-size='20' fill='%23fbbf24' text-anchor='middle'>Kasavu Queen</text></svg>",
+      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><rect width='400' height='500' fill='%2318181b'/><circle cx='200' cy='180' r='38' fill='%23f4f4f5'/><text x='200' y='360' font-family='serif' font-size='20' fill='%23f4f4f5' text-anchor='middle'>Purest Soul</text></svg>"
+    ];
+
+    function applyArtworkFallback(img, index) {
+      img.src = vectorArtworks[index];
+    }
+
+    /* 4. Synthesizer (Web Audio API) */
+    let audioCtx = null;
+    let isMelodyPlaying = false;
+    let melodyStep = 0;
+    let melodyTimer = null;
+
+    const bdayNotes = [
+      { f: 261.63, d: 350 }, { f: 261.63, d: 350 }, { f: 293.66, d: 500 },
+      { f: 261.63, d: 500 }, { f: 349.23, d: 500 }, { f: 329.63, d: 900 },
+      { f: 261.63, d: 350 }, { f: 261.63, d: 350 }, { f: 293.66, d: 500 },
+      { f: 261.63, d: 500 }, { f: 392.00, d: 500 }, { f: 349.23, d: 900 },
+      { f: 261.63, d: 350 }, { f: 261.63, d: 350 }, { f: 523.25, d: 500 },
+      { f: 440.00, d: 500 }, { f: 349.23, d: 500 }, { f: 329.63, d: 500 },
+      { f: 293.66, d: 700 }, { f: 466.16, d: 350 }, { f: 466.16, d: 350 },
+      { f: 440.00, d: 500 }, { f: 349.23, d: 500 }, { f: 392.00, d: 500 },
+      { f: 349.23, d: 1000 }
+    ];
+
+    function initAudio() {
+      try {
+        if (!audioCtx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          audioCtx = new AudioContextClass();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+      } catch (e) {}
+    }
+
+    function playTone(freq, dur = 0.5) {
+      if (!audioCtx) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.1, audioCtx.currentTime + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + dur + 0.05);
+      } catch (e) {}
+    }
+
+    function playPop() {
+      if (!audioCtx) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(450, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(90, audioCtx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.09);
+      } catch (e) {}
+    }
+
+    function playMelodyLoop() {
+      if (!isMelodyPlaying) return;
+      const note = bdayNotes[melodyStep % bdayNotes.length];
+      playTone(note.f, note.d / 1000);
+      melodyStep++;
+      melodyTimer = setTimeout(playMelodyLoop, note.d);
+    }
+
+    function toggleAudioMelody() {
+      initAudio();
+      const text = document.getElementById('musicText');
+      const emoji = document.getElementById('musicEmoji');
+
+      if (!isMelodyPlaying) {
+        isMelodyPlaying = true;
+        text.textContent = "Music: On";
+        emoji.textContent = "🔊";
+        playMelodyLoop();
+      } else {
+        isMelodyPlaying = false;
+        clearTimeout(melodyTimer);
+        text.textContent = "Play Music";
+        emoji.textContent = "🎵";
+      }
+    }
+
+    /* 5. User Actions */
+    function revealCelebration() {
+      initAudio();
+      if (!isMelodyPlaying) toggleAudioMelody();
+
+      const modal = document.getElementById('giftScreen');
+      modal.classList.add('hidden');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
+
+      spawnConfetti(65);
+    }
+
+    let candlesOut = false;
+    function blowCandles() {
+      initAudio();
+      const flames = document.querySelectorAll('.flame-candle');
+      const btnText = document.getElementById('blowBtnText');
+      const wishBox = document.getElementById('wishBox');
+
+      if (candlesOut) {
+        flames.forEach(f => f.classList.remove('extinguished'));
+        btnText.textContent = "Blow Out Candles";
+        wishBox.classList.remove('show');
+        candlesOut = false;
+        showToast("🕯️ Candles rekindled for another wish!");
+        return;
+      }
+
+      candlesOut = true;
+      flames.forEach((flame, i) => {
+        setTimeout(() => flame.classList.add('extinguished'), i * 60);
+      });
+
+      setTimeout(() => {
+        playTone(523.25, 0.3);
+        setTimeout(() => playTone(659.25, 0.3), 120);
+        setTimeout(() => playTone(783.99, 0.4), 240);
+      }, 180);
+
+      spawnConfetti(70);
+
+      setTimeout(() => {
+        wishBox.classList.add('show');
+        btnText.textContent = "Light Candles Again 🕯️";
+        showToast("✨ Your wish is sealed, Paru!");
+      }, 350);
+    }
+
+    const confessions = [
+      "Paru, your smile is my absolute favorite sight in this entire universe. 💖",
+      "Resting my head with you makes every noisy thought disappear. 🌸",
+      "You look impossibly stunning in traditional sarees, my queen. ✨",
+      "Thank you for being my constant peace and greatest blessing. Amal loves you forever! ❤️"
+    ];
+
+    function popBalloon(index) {
+      initAudio();
+      playPop();
+
+      const b = document.getElementById(`balloon-${index}`);
+      if (b) {
+        b.innerHTML = `
+          <div class="balloon-shape" style="background: #24051a; border: 2px solid #f59e0b; color: #fde047;">💌</div>
+          <div class="balloon-label" style="color: #fca5a5;">Opened!</div>
+        `;
+        b.onclick = null;
+      }
+
+      const reveal = document.getElementById('balloonReveal');
+      const msg = document.getElementById('balloonMessage');
+      msg.textContent = `"${confessions[index]}"`;
+      reveal.classList.add('show');
+
+      spawnConfetti(30);
+      showToast("🎈 Secret note discovered!");
+    }
+
+    function claimPass(btn, title) {
+      initAudio();
+      playTone(659.25, 0.3);
+      btn.textContent = "Claimed! 💖";
+      btn.classList.add('claimed');
+      showToast(`🎟️ "${title}" claimed for Amal!`);
+      spawnConfetti(35);
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      const msg = document.getElementById('toastMsg');
+      msg.textContent = text;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2600);
+    }
+  </script>
+</body>
+</html>
+
