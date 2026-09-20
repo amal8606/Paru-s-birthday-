@@ -35,7 +35,9 @@
     .ambient-bg {
       position: fixed;
       inset: 0;
-      background-image: radial-gradient(circle at 50% 20%, rgba(136, 19, 55, 0.28) 0%, rgba(9, 1, 7, 0.95) 75%);
+      background-image: radial-gradient(circle at 50% 20%, rgba(136, 19, 55, 0.4) 0%, rgba(9, 1, 7, 0.95) 75%), url('ChatGPT%20Image%20Apr%2029,%202026,%2010_35_22%20PM.png');
+      background-size: cover;
+      background-position: center;
       pointer-events: none;
       z-index: 1;
       transition: background-image 0.6s ease-in-out, opacity 0.5s ease;
@@ -751,49 +753,49 @@
       </p>
 
       <div class="polaroids-grid">
-        <!-- Photo 1 -->
+        <!-- Photo 1: Window Embrace -->
         <div class="polaroid-card" onclick="setWallpaperFromCard(0)">
           <div class="polaroid-img-wrap">
             <img id="imgMem-0" 
-                 src="ChatGPT Image Apr 29, 2026, 10_35_22 PM.png" 
+                 src="ChatGPT%20Image%20Apr%2029,%202026,%2010_35_22%20PM.png" 
                  alt="Amal and Arya warm embrace" 
-                 onerror="handleImgFallback(this, 0)">
+                 onerror="cascadeFallback(this, 0)">
           </div>
           <div class="polaroid-caption font-script">My Safe Place</div>
           <div class="polaroid-sub">Wrapped in your warmth is where I belong forever.</div>
         </div>
 
-        <!-- Photo 2 -->
+        <!-- Photo 2: Head on Shoulder -->
         <div class="polaroid-card" onclick="setWallpaperFromCard(1)">
           <div class="polaroid-img-wrap">
             <img id="imgMem-1" 
                  src="IMG20260215120344.jpg" 
                  alt="Arya resting head on Amal" 
-                 onerror="handleImgFallback(this, 1)">
+                 onerror="cascadeFallback(this, 1)">
           </div>
           <div class="polaroid-caption font-script">Beside You, Always</div>
           <div class="polaroid-sub">Resting on your shoulder, all worries simply melt away.</div>
         </div>
 
-        <!-- Photo 3 -->
+        <!-- Photo 3: Kasavu Saree Traditional -->
         <div class="polaroid-card" onclick="setWallpaperFromCard(2)">
           <div class="polaroid-img-wrap">
             <img id="imgMem-2" 
                  src="IMG_20260823_220422.jpg" 
                  alt="Arya in traditional Kasavu saree" 
-                 onerror="handleImgFallback(this, 2)">
+                 onerror="cascadeFallback(this, 2)">
           </div>
           <div class="polaroid-caption font-script">My Traditional Queen</div>
           <div class="polaroid-sub">That radiant smile that stole my heart on day one.</div>
         </div>
 
-        <!-- Photo 4 -->
+        <!-- Photo 4: Purest Soul Portrait -->
         <div class="polaroid-card" onclick="setWallpaperFromCard(3)">
           <div class="polaroid-img-wrap">
             <img id="imgMem-3" 
                  src="IMG-20260429-WA0033.jpg" 
                  alt="Arya gentle pure smile portrait" 
-                 onerror="handleImgFallback(this, 3)">
+                 onerror="cascadeFallback(this, 3)">
           </div>
           <div class="polaroid-caption font-script">The Purest Soul</div>
           <div class="polaroid-sub">Your gentle heart and sparkling eyes light up every room.</div>
@@ -988,73 +990,22 @@
     }
     requestAnimationFrame(renderParticles);
 
-    /* Romantic Illustrated Fallback Backups */
-    const fallbackArtworks = [
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><rect width='400' height='500' fill='%23240517'/><circle cx='200' cy='180' r='90' fill='%23fde047' opacity='0.3'/><circle cx='180' cy='170' r='24' fill='%23fef08a'/><circle cx='215' cy='180' r='22' fill='%23fbcfe8'/><text x='200' y='360' font-family='serif' font-size='20' fill='%23fde047' text-anchor='middle'>Amal &amp; Arya</text></svg>",
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><rect width='400' height='500' fill='%23190416'/><circle cx='170' cy='180' r='28' fill='%23fdba74'/><circle cx='230' cy='205' r='24' fill='%23f472b6'/><text x='200' y='360' font-family='serif' font-size='20' fill='%23fef08a' text-anchor='middle'>Beside You</text></svg>",
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><rect width='400' height='500' fill='%232a081c'/><circle cx='200' cy='175' r='35' fill='%23fde047'/><text x='200' y='360' font-family='serif' font-size='20' fill='%23fbbf24' text-anchor='middle'>Kasavu Queen</text></svg>",
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><rect width='400' height='500' fill='%2318181b'/><circle cx='200' cy='180' r='38' fill='%23f4f4f5'/><text x='200' y='360' font-family='serif' font-size='20' fill='%23f4f4f5' text-anchor='middle'>Purest Soul</text></svg>"
+    /* Dedicated filename fallbacks for each slot */
+    const photoFallbacks = [
+      ['ChatGPT Image Apr 29, 2026, 10_35_22 PM.png', 'photo1.jpg', 'photo1.png'],
+      ['IMG20260215120344.jpg', 'IMG-20260215120344.jpg', 'photo2.jpg'],
+      ['IMG_20260823_220422.jpg', 'IMG20260823_220422.jpg', 'photo3.jpg'],
+      ['IMG-20260429-WA0033.jpg', 'IMG_20260429_WA0033.jpg', 'photo4.jpg']
     ];
 
-    function handleImgFallback(img, index) {
-      img.onerror = null;
-      img.src = fallbackArtworks[index];
-    }
+    const fallbackIndex = [0, 0, 0, 0];
 
-    /* AUTOMATIC GITHUB REPOSITORY IMAGE RESOLVER */
-    async function resolveImagesFromGitHub() {
-      const possibleRepos = [
-        'amal8606/Paru-s-birthday-',
-        'amal8606/paru-s-birthday-',
-        'amal8606/Paru-s-birthday',
-        'amal8606/paru-s-birthday'
-      ];
-
-      for (const repo of possibleRepos) {
-        try {
-          const res = await fetch(`https://api.github.com/repos/${repo}/contents/`);
-          if (res.ok) {
-            const files = await res.json();
-            const imgFiles = files.filter(f => 
-              f.type === 'file' && /\.(jpe?g|png|webp)$/i.test(f.name)
-            );
-
-            if (imgFiles.length > 0) {
-              imgFiles.forEach((file, i) => {
-                if (i < 4) {
-                  const cardImg = document.getElementById(`imgMem-${i}`);
-                  if (cardImg) {
-                    const testImg = new Image();
-                    testImg.onload = () => {
-                      cardImg.src = file.name;
-                    };
-                    testImg.onerror = () => {
-                      if (file.download_url) {
-                        cardImg.src = file.download_url;
-                      }
-                    };
-                    testImg.src = file.name;
-                  }
-                }
-              });
-
-              // Set first image as romantic wallpaper
-              const firstImg = imgFiles[0];
-              if (firstImg) {
-                const bg = document.getElementById('ambientBg');
-                bg.style.backgroundImage = `radial-gradient(circle at 50% 20%, rgba(136, 19, 55, 0.45) 0%, rgba(9, 1, 7, 0.95) 75%), url('${firstImg.download_url || firstImg.name}')`;
-                bg.style.backgroundSize = 'cover';
-                bg.style.backgroundPosition = 'center';
-              }
-              break;
-            }
-          }
-        } catch (e) {
-          console.warn('GitHub resolver checking next repo...', e);
-        }
+    function cascadeFallback(img, slot) {
+      fallbackIndex[slot]++;
+      if (fallbackIndex[slot] < photoFallbacks[slot].length) {
+        img.src = encodeURI(photoFallbacks[slot][fallbackIndex[slot]]);
       }
     }
-    resolveImagesFromGitHub();
 
     function setWallpaperFromCard(index) {
       const img = document.getElementById(`imgMem-${index}`);
